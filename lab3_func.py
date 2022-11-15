@@ -14,12 +14,12 @@ def Get_M():
 	M = np.eye(4)	
 	M[0,3] = -0.15
 	M[1,3] = 0.15
-	M = matmul(M, DHtoA(0, 			-PI/2,  0, 	0.162))
+	M = matmul(M, DHtoA(0, 		-PI/2,  0, 	0.162))
 	M = matmul(M, DHtoA(-0.244, 	0,    	-PI, 	0.120))
-	M = matmul(M, DHtoA(-0.213, 	0,    	0, 		-0.093))
-	M = matmul(M, DHtoA(0, 			-PI/2, 	PI/2, 	0.083))
-	M = matmul(M, DHtoA(0, 			PI/2,  	0, 		0.083))
-	M = matmul(M, DHtoA(0.0535, 	0, 		0, 		0.141))
+	M = matmul(M, DHtoA(-0.213, 	0,    	0, 	-0.093))
+	M = matmul(M, DHtoA(0, 		-PI/2, 	PI/2, 	0.083))
+	M = matmul(M, DHtoA(0, 		PI/2,  	0, 	0.083))
+	M = matmul(M, DHtoA(0.0535, 	0, 	0, 	0.141))
 	
 	# ==============================================================#
 	return M
@@ -69,12 +69,12 @@ def lab_fk(theta1, theta2, theta3, theta4, theta5, theta6):
 	T[1,3] = 0.15
 
 	#DH table
-	T = matmul(T, DHtoA(0, 			-PI/2,  theta[0], 		0.162))
+	T = matmul(T, DHtoA(0, 		-PI/2,  theta[0], 	0.162))
 	T = matmul(T, DHtoA(-0.244, 	0,    	theta[1]-PI, 	0.120))
-	T = matmul(T, DHtoA(-0.213, 	0,    	theta[2], 		-0.093))
-	T = matmul(T, DHtoA(0, 			-PI/2, 	theta[3]+PI/2, 	0.083))
-	T = matmul(T, DHtoA(0, 			PI/2,  	theta[4], 		0.083))
-	T = matmul(T, DHtoA(0.0535, 	0, 		theta[5], 		0.141))
+	T = matmul(T, DHtoA(-0.213, 	0,    	theta[2], 	-0.093))
+	T = matmul(T, DHtoA(0, 		-PI/2, 	theta[3]+PI/2, 	0.083))
+	T = matmul(T, DHtoA(0, 		PI/2,  	theta[4], 	0.083))
+	T = matmul(T, DHtoA(0.0535, 	0, 	theta[5], 	0.141))
 
 	# ==============================================================#
 	
