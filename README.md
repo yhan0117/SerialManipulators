@@ -1,2 +1,2 @@
-# ENME480_intro_to_robotics
-ROS projects for ENME480, Introduction to Robotics
+# ROS projects on serial manipulators
+Dedicated for a robotics minor course at UMD - ENME480, Introduction to Robotics\
